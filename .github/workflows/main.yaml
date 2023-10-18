@@ -3,12 +3,12 @@ name: calculator_app_test
 on: push
 
 jobs:
- tests:
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v2
-    - uses: subisito/flutter-action@v1.3.0
-    - name: install dependencies
-      run: flutter packages geet
-    - name: run tests
-      run: flutter test --exclude-tags='no-ci'
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.13.0'  
+      - run: flutter pub get
+      - run: flutter test --exclude-tags='no-ci'
