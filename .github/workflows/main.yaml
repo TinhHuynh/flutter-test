@@ -1,6 +1,6 @@
 name: calculator_app_test
 
-on: pull_request
+on: push
 
 jobs:
  tests:
