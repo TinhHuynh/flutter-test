@@ -1,0 +1,8 @@
+workflows:
+  flutter-widget:
+    name: Flutter Widget
+    environment:
+      flutter: stable
+    scripts:
+      - flutter pub get
+      - flutter test --exclude-tags='no-ci'
